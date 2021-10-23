@@ -1,0 +1,206 @@
+.calculator {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: space-around;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 8vh;
+}
+
+#dynamicOutput {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.origin {
+    stroke: white;
+}
+
+#advancedMainView {
+    overflow-y: scroll;
+    height: calc(100% - 126px);
+    padding-bottom: 40px;
+}
+
+.block-title {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#tips {
+    text-align: center;
+}
+
+.font-size-fix {
+    font-size: 20px;
+}
+
+.calc-option {
+    font-size: 20px;
+    margin-right: 5px;
+    width: 203px;
+    margin-top: 10px;
+}
+
+#graphOutput {
+    text-align: center;
+}
+
+.row {
+    margin: 0;
+}
+
+.calc-option > .icon {
+    font-size: 50px;
+}
+
+path.domain{
+  stroke: white;
+}
+
+g.axis{
+  stroke: white;
+}
+
+.containerRow {
+	display: flex;
+	width: 90%;
+	height: 100%;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.containerRow div {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.containerInputs div input {
+	font-size: 2.5em;
+	width: 96%;
+	height: 80%;
+	caret-color: transparent !important;
+}
+
+.containerInputs div {
+	width: 96%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+#calcOperations {
+    border-bottom: transparent;
+    font-size: smaller;
+    padding-left: 2vw;
+    color: grey;
+    font-weight: bold;
+    background-color: transparent;
+    border-style: hidden;
+}
+
+#entry {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+#calcEntry {
+	border-top: transparent;
+	border-left: transparent;
+	height: 100%;
+	background-color: transparent;
+    border-style: hidden;
+}
+
+#signCalculation {
+    border-top: transparent;
+    border-right: transparent;
+    height: 100%;
+    width: 5vw;
+    background-color: transparent;
+    border-style: hidden;
+}
+
+.containerRow div input:focus {
+	outline: none;
+}
+
+.containerRow div .operations {
+    font-size: 300%;
+    width: 80%;
+    height: 80%;
+    background-color: grey;
+    background: linear-gradient(
+ to right,
+ rgba(230, 230, 230, 0.1) 0%,
+ rgba(230, 230, 230, 0.1) 25%,
+ rgba(255, 255, 255, 0.1) 50%,
+ rgba(255, 255, 255, 0.1) 75%,
+ rgba(211, 211, 211, 0.1) 85%,
+ rgba(128, 128, 128, 0.1) 100%
+ ) !important;
+    background-size: 400% 400% !important;
+    background-repeat: no-repeat !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: 0.5s all !important;
+    cursor: pointer;
+    mix-blend-mode: screen;
+    color: white !important;
+}
+
+.containerRow div .mainButtons {
+    font-size: 300%;
+    width: 80%;
+    height: 80%;
+    background: linear-gradient( to right, rgba(230, 230, 230, 0.1) 0%, rgba(230, 230, 230, 0.1) 25%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, rgba(211, 211, 211, 0.1) 85%, rgba(128, 128, 128, 0.1) 100% ) !important;
+    background-size: 400% 400% !important;
+    background-repeat: no-repeat !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: 0.5s all !important;
+    cursor: pointer;
+    mix-blend-mode: screen;
+    color: white !important;
+    outline: none !important;
+}
+
+button:focus {
+	outline: none !important;
+}
+
+#outputContainer {
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    margin-bottom: 8vh;
+	border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.45);
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.containerRow div button:hover {
+	cursor: pointer;
+	background-position: 100% 100% !important;
+}
+
+sup {
+	font-size: 50%;
+	margin-top: -10%;
+}
+
+@media only screen and (max-width: 600px) {
+	.containerRow div .mainButtons,
+	.containerRow div .operations {
+		font-size: 130%;
+	}
+}

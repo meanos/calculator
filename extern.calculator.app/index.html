@@ -1,0 +1,258 @@
+
+
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta name="format-detection" content="telephone=no">
+        <meta charset="UTF-8">
+
+        <title>Calculator</title>
+            
+        <!-- CSS -->
+        <link href="../../Shared/CoreCSS/bootstrap.min.css" rel="stylesheet">
+        <link href="../../Shared/CoreCSS/animate.min.css" rel="stylesheet">
+        <link href="../../Shared/CoreCSS/font-awesome.min.css" rel="stylesheet">
+        <link href="../../Shared/CoreCSS/form.css" rel="stylesheet">
+        <link href="../../Shared/CoreCSS/calendar.css" rel="stylesheet">
+        <link href="../../Shared/CoreCSS/app-style.css" rel="stylesheet">
+        <link href="../../Shared/CoreCSS/icons.css" rel="stylesheet">
+        <link href="../../Shared/CoreCSS/generics.css" rel="stylesheet">
+    	<link href="../../Shared/CoreCSS/slick.css" rel="stylesheet"> 
+      	<link href="../../Shared/CoreCSS/slick-theme.css" rel="stylesheet">
+        <link href="../../Shared/CoreCSS/app-control.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+
+    </head>
+
+	
+    <body id="body_settings">
+        <div style="overflow-y: hidden; overflow-x:hidden;">
+        
+        <section id="main2" class="p-relative" role="main" >
+            <!-- Sidebar -->
+            <aside id="sidebar" class="hideBar hidden">
+                <!-- Side Menu -->
+                <ul class="list-unstyled side-menu">
+                    <li class="dropdown">
+                        <a href="#">
+                            <span class="icon sidebar_icon">&#61769;</span>
+                            <span class="menu-item">File</span>
+                        </a>
+                         <ul class="list-unstyled menu-item">
+                            <li><a href="#">New <span class="pull-right">Ctrl+N</span></a></li>
+                        </ul>
+                    </li>
+                    <div class="whiter"></div>
+                    <li>
+                        <a href="#">
+                            <span class="icon sidebar_icon">&#61886;</span>
+                            <span class="menu-item">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+            
+            <section id="content" style="margin-left: 0;">
+            <!-- Your App contents here -->
+             <div class="tab-container tile" style="margin: 0;">
+                        <ul class="nav tab nav-tabs" style="font-size: 18px; padding-top: 5px;">
+                            <li class="active"><a href="#classicView"><i class="fa fa-calculator" aria-hidden="true"></i> Classic</a></li>
+                            <li><a href="#advancedView"><span class="icon">&#61796;</span> Advanced</a></li>
+                        </ul>
+                        <div class="tab-content" style="    height: calc(100% - 50px);">
+                            <div class="tab-pane active overflow" style="height: 100%;" id="classicView">
+            <div id="simpleMath" class="col-md-12">
+            <div class="calculator">
+                <div class="containerRow containerInputs">
+                    <div id="outputContainer">
+                        <input id="calcOperations" type="text" >
+                        <div id="entry">
+                            <input id="signCalculation" type="text">
+                            <input id="calcEntry" type="text" dir="rtl">
+                        </div>
+                    </div>
+                </div>
+                 <div class="containerRow" style="height: fit-content;"> 
+                 </div>
+                <div class="containerRow"> 
+                    <div>
+                        <button class="btn btn-alt m-r-5 operations"> x<sup>2</sup> </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 operations" onclick="addPi()"> &Pi; </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 operations" onclick="clearAll()"> C </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 operations" onclick="clearEntry()"> CE </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 operations" onclick="removeNumber()"> &#8666; </button>
+                    </div>
+                </div>
+                <div class="containerRow"> 
+                    <div>
+                        <button class="btn btn-alt m-r-5 operations"> x<sup>3</sup> </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 operations"> ( </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 operations"> ) </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 operations"> mod </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 operations"> exp </button>
+                    </div>
+                </div>
+                <div class="containerRow"> 
+                    <div>
+                        <button class="btn btn-alt m-r-5 operations"> x<sup>y</sup> </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 mainButtons" onclick="addNumber(7)"> 7 </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 mainButtons" onclick="addNumber(8)"> 8 </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 mainButtons" onclick="addNumber(9)"> 9 </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 operations" onclick="nextNumber('/')"> / </button>
+                    </div>
+                </div>
+                <div class="containerRow"> 
+                    <div>
+                        <button class="btn btn-alt m-r-5 operations"> 10<sup>x</sup> </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 mainButtons" onclick="addNumber(4)"> 4 </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 mainButtons" onclick="addNumber(5)"> 5 </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 mainButtons" onclick="addNumber(6)"> 6 </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 operations" onclick="nextNumber('*')"> * </button>
+                    </div>
+                </div>
+                <div class="containerRow"> 
+                    <div>
+                        <button class="btn btn-alt m-r-5 operations"> log </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 mainButtons" onclick="addNumber(1)"> 1 </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 mainButtons" onclick="addNumber(2)"> 2 </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 mainButtons" onclick="addNumber(3)"> 3 </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 operations" onclick="nextNumber('+')"> + </button>
+                    </div>
+                </div>
+                <div class="containerRow"> 
+                    <div>
+                        <button class="btn btn-alt m-r-5 operations"> In </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 mainButtons"> . </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 mainButtons" onclick="addNumber(0)"> 0 </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 mainButtons" onclick="operationCalculate()"> = </button>
+                    </div>
+                    <div> 
+                        <button class="btn btn-alt m-r-5 operations" onclick="nextNumber('-')"> - </button>
+                    </div>
+                </div>
+            </div>
+            </div>
+                            </div>
+
+                            <div class="tab-pane overflow" style="height: 100%;" id="advancedView">
+            <div id="advancedMath" class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3" style="margin-top: 50px;">
+                        <input id="advancedCalcsInput" type="text" class="form-control input-lg" style="text-align: center; margin-bottom: 30px;" placeholder="Enter a mathematical expression to begin">
+                    </div>
+                </div>
+
+                <div id="advancedMainView" class="row">
+                    <div id="tips">
+                        <p> Enter an equation such as: </p>
+                        <a href="#" onclick="enterCustomExpression(&quot;x^2+3x=10&quot;)"> `x^2+3x=10` </a> or <a href="#" onclick="enterCustomExpression(&quot;x^4-10=20-x^2&quot;)"> `x^4-10=20-x^2` </a> or <a href="#" onclick="enterCustomExpression(&quot;x^2*sin(x)=4&quot;)"> `x^2*sin(x)=4` </a>
+                         <p> Enter a function with f(x) such as: </p>
+                        <a href="#" onclick="enterCustomExpression(&quot;f(x)=x^4-2x^3&quot;)"> `f(x)=x^4-2x^3` </a> or <a href="#" onclick="enterCustomExpression(&quot;f(t)=t^5+3t^4&quot;)"> `f(t)=t^5+3t^4` </a>
+                        
+                        <div class="row">
+                            <h3 class="block-title">Calculation Options</h3>
+                            <div class="row">
+                                <a href="#" class="btn btn-alt calc-option"> <span class="icon">&#61877;</span> <br> Basics </a>
+                                <a href="#" class="btn btn-alt calc-option"> <span class="icon">&#61877;</span> <br> Trigonometry </a>
+                                <a href="#" class="btn btn-alt calc-option"> <span class="icon">&#61877;</span> <br> Imaginary Numbers </a>
+                                <a href="#" class="btn btn-alt calc-option"> <span class="icon">&#61877;</span> <br> Calculus </a>
+                                <a href="#" class="btn btn-alt calc-option"> <span class="icon">&#61877;</span> <br> Linear Algebra</a>
+                                <a href="#" class="btn btn-alt calc-option"> <span class="icon">&#61877;</span> <br> Other </a>
+                            </div>
+                            
+                        </div>
+                        
+                        
+                    </div>
+                    <div id="advancedCalcOut" class="hidden">
+                        <div id="dynamicOutput"></div>
+                        
+                        <div id="lols"></div>
+                        <div id="graphOutput" class="hidden"></div>
+                    </div>
+                </div>
+            </div>
+                            </div>
+                        </div>
+
+             </div>
+                        
+
+	    </section>
+        
+        <!-- Javascript Libraries -->
+        <!-- jQuery -->
+        <script src="../../Shared/CoreJS/jquery.min.js"></script> <!-- jQuery Library -->
+        <script src="../../Shared/CoreJS/jquery-ui.min.js"></script> <!-- jQuery UI -->
+        <script src="../../Shared/CoreJS/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
+        
+        <!-- Bootstrap -->
+        <script src="../../Shared/CoreJS/bootstrap.min.js"></script>
+
+        
+        <!-- development -->
+        <script src="./Libraries/big.js-master/big.js"></script>
+<script src="js/nerdamer.core.js"></script> 
+<!-- LOAD ADD-ONS -->
+<script src="js/Algebra.js"></script>
+<script src="js/Calculus.js"></script>
+<script src="js/Solve.js"></script>
+<script src="js/Extra.js"></script>
+<script src="https://unpkg.com/d3@3/d3.min.js"></script>
+      <script src="js/function-plot.js"></script>
+
+        <script src="./js/main.js"></script>
+        <script src="../../Shared/CoreJS/functions.js"></script>
+        <!--<script src="js/mathjax.js"></script>-->
+        <script async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML-full">
+	</script>
+        
+    </body>
+
+
